@@ -45,6 +45,10 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 				</div>
 			</div>
 		</section>
+
+		<footer>
+			<p>&copy; {new Date().getFullYear()} Roomie Ecosystem. Crafted with Astro by 99%-from-AI Labs.</p>
+		</footer>
 	</main>
 </Layout>
 
@@ -162,6 +166,14 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 		color: var(--color-text-muted);
 		line-height: 1.6;
 		font-size: 0.95rem;
+	}
+
+	footer {
+		text-align: center;
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+		margin-top: 5rem;
+		opacity: 0.6;
 	}
 
 	@keyframes fadeUp {
