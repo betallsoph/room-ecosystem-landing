@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 ---
 
 <Layout title="roomieVerse - Roomie Ecosystem">
@@ -18,15 +19,18 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Key Features</h2>
 			<div class="features-grid">
 				<div class="feature-card glass-panel">
-					<h3>📅 Shared Calendar</h3>
+					<div class="icon-wrapper"><Calendar size={28} /></div>
+					<h3>Shared Calendar</h3>
 					<p>Keep track of apartment events, quiet hours, and when guests are coming over.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>✅ Chore Management</h3>
+					<div class="icon-wrapper"><CheckCircle size={28} /></div>
+					<h3>Chore Management</h3>
 					<p>Fair and automated chore rotation so the apartment always stays clean without arguments.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>💬 Centralized Chat</h3>
+					<div class="icon-wrapper"><MessageSquare size={28} /></div>
+					<h3>Centralized Chat</h3>
 					<p>A dedicated space for apartment announcements and daily chatter, separate from your messy personal inboxes.</p>
 				</div>
 			</div>
@@ -112,6 +116,15 @@ import Layout from '../layouts/Layout.astro';
 	.feature-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+	}
+
+	.icon-wrapper {
+		color: var(--color-brand-1);
+		margin-bottom: 1rem;
+		display: inline-flex;
+		padding: 0.8rem;
+		background: rgba(99, 102, 241, 0.1);
+		border-radius: 12px;
 	}
 
 	.feature-card h3 {

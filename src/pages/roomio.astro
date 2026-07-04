@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Receipt, Bell, PieChart } from 'lucide-react';
 ---
 
 <Layout title="roomio - Roomie Ecosystem">
@@ -18,15 +19,18 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Key Features</h2>
 			<div class="features-grid">
 				<div class="feature-card glass-panel">
-					<h3>💸 Split Anything</h3>
+					<div class="icon-wrapper"><Receipt size={28} /></div>
+					<h3>Split Anything</h3>
 					<p>From rent and utilities to that midnight pizza order. Split bills equally or by specific percentages.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>🔔 Smart Reminders</h3>
+					<div class="icon-wrapper"><Bell size={28} /></div>
+					<h3>Smart Reminders</h3>
 					<p>Automated, friendly notifications so you never have to awkwardly ask your roommate for money again.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>📊 Expense Insights</h3>
+					<div class="icon-wrapper"><PieChart size={28} /></div>
+					<h3>Expense Insights</h3>
 					<p>See where your household money is going each month with beautiful charts and summaries.</p>
 				</div>
 			</div>
@@ -114,6 +118,15 @@ import Layout from '../layouts/Layout.astro';
 	.feature-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
+	}
+
+	.icon-wrapper {
+		color: var(--color-brand-2);
+		margin-bottom: 1rem;
+		display: inline-flex;
+		padding: 0.8rem;
+		background: rgba(236, 72, 153, 0.1);
+		border-radius: 12px;
 	}
 
 	.feature-card h3 {

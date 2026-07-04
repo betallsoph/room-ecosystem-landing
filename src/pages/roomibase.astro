@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 ---
 
 <Layout title="roomiBase - Roomie Ecosystem">
@@ -18,15 +19,18 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Key Features</h2>
 			<div class="features-grid">
 				<div class="feature-card glass-panel">
-					<h3>🔍 Smart Matchmaking</h3>
+					<div class="icon-wrapper"><Search size={28} /></div>
+					<h3>Smart Matchmaking</h3>
 					<p>Our algorithm connects you with roommates whose habits, cleanliness, and schedules align with yours.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>🏠 Verified Listings</h3>
+					<div class="icon-wrapper"><BadgeCheck size={28} /></div>
+					<h3>Verified Listings</h3>
 					<p>Browse high-quality, verified room listings to ensure your safety and comfort before moving in.</p>
 				</div>
 				<div class="feature-card glass-panel">
-					<h3>🤝 Secure Messaging</h3>
+					<div class="icon-wrapper"><MessageCircle size={28} /></div>
+					<h3>Secure Messaging</h3>
 					<p>Chat safely with potential roommates and landlords directly within the platform without sharing personal info too early.</p>
 				</div>
 			</div>
@@ -114,6 +118,15 @@ import Layout from '../layouts/Layout.astro';
 	.feature-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+	}
+
+	.icon-wrapper {
+		color: var(--color-brand-3);
+		margin-bottom: 1rem;
+		display: inline-flex;
+		padding: 0.8rem;
+		background: rgba(16, 185, 129, 0.1);
+		border-radius: 12px;
 	}
 
 	.feature-card h3 {
