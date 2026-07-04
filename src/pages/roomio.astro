@@ -23,6 +23,22 @@ import { Receipt, Bell, PieChart } from 'lucide-react';
 			</div>
 		</section>
 
+		<!-- Overview Section -->
+		<section class="overview-section">
+			<div class="overview-item">
+				<h4>Để làm gì?</h4>
+				<p>Hệ thống quản lý tài chính và tự động đối soát tiền phòng. Hỗ trợ chia hóa đơn, tự động tạo link thanh toán PayOS và nhắc nhở thân thiện.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Dành cho ai?</h4>
+				<p>Các chủ nhà trọ, quản lý tòa nhà chung cư mini (landlord-first) và những bạn trẻ ở ghép cần phân chia chi phí sinh hoạt rõ ràng hàng tháng.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Giải quyết khó khăn gì?</h4>
+				<p>Loại bỏ việc tính tiền điện nước thủ công phức tạp, giải quyết sự ngại ngùng khi phải đòi tiền trực tiếp và chống thất thoát dòng tiền.</p>
+			</div>
+		</section>
+
 		<section class="features-section">
 			<div class="features-list">
 				<div class="feature-item">
@@ -84,7 +100,7 @@ import { Receipt, Bell, PieChart } from 'lucide-react';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.detail-logo {
@@ -156,6 +172,36 @@ import { Receipt, Bell, PieChart } from 'lucide-react';
 	.detail-cta-secondary:hover {
 		transform: translateY(-2px);
 		background: #e2e8f0;
+	}
+
+	/* Overview Section style */
+	.overview-section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+		text-align: left;
+	}
+
+	.overview-item {
+		border-left: 2px solid var(--color-brand-2);
+		padding-left: 1rem;
+	}
+
+	.overview-item h4 {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.overview-item p {
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+		margin: 0;
 	}
 
 	/* Simplified Features List */

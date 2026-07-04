@@ -18,6 +18,22 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 			</a>
 		</section>
 
+		<!-- Overview Section -->
+		<section class="overview-section">
+			<div class="overview-item">
+				<h4>Để làm gì?</h4>
+				<p>Nền tảng tìm phòng trọ, căn hộ, và roommate lý tưởng. Người dùng có thể đăng tin, tìm kiếm, kết nối dựa trên phong cách sống.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Dành cho ai?</h4>
+				<p>Người đi thuê phòng (sinh viên, người đi làm), người có phòng trống muốn tìm roommate ở ghép, và các chủ nhà trọ chính chủ.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Giải quyết khó khăn gì?</h4>
+				<p>Không qua trung gian giúp tránh lừa đảo tiền cọc, giảm thiểu xung đột khi sống chung nhờ bộ lọc thói quen sinh hoạt cực kỳ chi tiết.</p>
+			</div>
+		</section>
+
 		<section class="features-section">
 			<div class="features-list">
 				<div class="feature-item">
@@ -79,7 +95,7 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.detail-logo {
@@ -127,6 +143,36 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 	.detail-cta:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+	}
+
+	/* Overview Section style */
+	.overview-section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+		text-align: left;
+	}
+
+	.overview-item {
+		border-left: 2px solid var(--color-brand-3);
+		padding-left: 1rem;
+	}
+
+	.overview-item h4 {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.overview-item p {
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+		margin: 0;
 	}
 
 	/* Simplified Features List */

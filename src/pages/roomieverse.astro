@@ -18,6 +18,22 @@ import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 			</a>
 		</section>
 
+		<!-- Overview Section -->
+		<section class="overview-section">
+			<div class="overview-item">
+				<h4>Để làm gì?</h4>
+				<p>Nền tảng quản lý và kết nối mọi hoạt động trong phòng ở ghép. Giúp chia sẻ thông tin, lịch trình và phân công công việc nhà tự động.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Dành cho ai?</h4>
+				<p>Những người đang sống chung (roommates), sinh viên ở ghép, hoặc các nhóm bạn thuê chung căn hộ muốn duy trì không gian sống văn minh.</p>
+			</div>
+			<div class="overview-item">
+				<h4>Giải quyết khó khăn gì?</h4>
+				<p>Tránh tình trạng tị nạnh làm việc nhà nhờ tính năng xoay vòng tự động, không còn quên lịch đóng tiền và trôi tin thông báo quan trọng.</p>
+			</div>
+		</section>
+
 		<section class="features-section">
 			<div class="features-list">
 				<div class="feature-item">
@@ -79,7 +95,7 @@ import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.detail-logo {
@@ -125,6 +141,36 @@ import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 	.detail-cta:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+	}
+
+	/* Overview Section style */
+	.overview-section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+		text-align: left;
+	}
+
+	.overview-item {
+		border-left: 2px solid var(--color-brand-1);
+		padding-left: 1rem;
+	}
+
+	.overview-item h4 {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.overview-item p {
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+		margin: 0;
 	}
 
 	/* Simplified Features List */
