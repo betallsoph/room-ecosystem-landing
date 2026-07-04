@@ -13,6 +13,9 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 			<p class="description">
 				Find the perfect room or roommate. Advanced matchmaking based on lifestyle, habits, and preferences.
 			</p>
+			<a href="https://findingroom.app" target="_blank" rel="noopener noreferrer" class="detail-cta">
+				Truy cập roomiBase &rarr;
+			</a>
 		</section>
 
 		<section class="features-section">
@@ -95,6 +98,24 @@ import { Search, BadgeCheck, MessageCircle } from 'lucide-react';
 		max-width: 600px;
 		line-height: 1.6;
 		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.detail-cta {
+		display: inline-flex;
+		background: var(--color-brand-3);
+		color: #ffffff;
+		padding: 0.8rem 2rem;
+		border-radius: 12px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: transform 0.2s, box-shadow 0.2s;
+		box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+	}
+
+	.detail-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
 	}
 
 	.features-section h2 {

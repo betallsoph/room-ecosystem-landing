@@ -13,6 +13,14 @@ import { Receipt, Bell, PieChart } from 'lucide-react';
 			<p class="description">
 				The smartest way to handle shared expenses and bills. Never let money ruin a good friendship.
 			</p>
+			<div class="cta-group">
+				<a href="https://roomio.vn" target="_blank" rel="noopener noreferrer" class="detail-cta">
+					Truy cập roomio Web &rarr;
+				</a>
+				<a href="https://t.me/roomiobyantt_bot/roomio" target="_blank" rel="noopener noreferrer" class="detail-cta-secondary">
+					Telegram Mini App &rarr;
+				</a>
+			</div>
 		</section>
 
 		<section class="features-section">
@@ -95,6 +103,48 @@ import { Receipt, Bell, PieChart } from 'lucide-react';
 		max-width: 600px;
 		line-height: 1.6;
 		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.detail-cta {
+		display: inline-flex;
+		background: var(--color-brand-2);
+		color: #ffffff;
+		padding: 0.8rem 2rem;
+		border-radius: 12px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: transform 0.2s, box-shadow 0.2s;
+		box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+	}
+
+	.detail-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(236, 72, 153, 0.3);
+	}
+
+	.detail-cta-secondary {
+		display: inline-flex;
+		background: #f1f5f9;
+		color: #334155;
+		border: 1px solid #cbd5e1;
+		padding: 0.8rem 2rem;
+		border-radius: 12px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: transform 0.2s, background-color 0.2s;
+	}
+
+	.detail-cta-secondary:hover {
+		transform: translateY(-2px);
+		background: #e2e8f0;
 	}
 
 	.features-section h2 {

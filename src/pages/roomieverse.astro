@@ -13,6 +13,9 @@ import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 			<p class="description">
 				Your digital universe for co-living. We make sharing a living space seamless, organized, and fun.
 			</p>
+			<a href="https://roomieverse.app" target="_blank" rel="noopener noreferrer" class="detail-cta">
+				Truy cập roomieVerse &rarr;
+			</a>
 		</section>
 
 		<section class="features-section">
@@ -93,6 +96,24 @@ import { Calendar, CheckCircle, MessageSquare } from 'lucide-react';
 		color: var(--color-text-muted);
 		max-width: 600px;
 		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+
+	.detail-cta {
+		display: inline-flex;
+		background: var(--color-brand-1);
+		color: #ffffff;
+		padding: 0.8rem 2rem;
+		border-radius: 12px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: transform 0.2s, box-shadow 0.2s;
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+	}
+
+	.detail-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
 	}
 
 	.features-section h2 {
