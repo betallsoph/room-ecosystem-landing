@@ -1,11 +1,276 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="The Roomie Ecosystem">
+	<main class="container">
+		
+		<!-- Hero Section -->
+		<section class="hero">
+			<h1 class="title">The <span class="text-gradient">Roomie</span> Ecosystem</h1>
+			<p class="subtitle">The ultimate suite of applications designed to upgrade your living experience. Connect, manage, and thrive together.</p>
+		</section>
+
+		<!-- Logo Row Section -->
+		<section class="logo-row-section">
+			<div class="logo-row">
+				<!-- Logo 1: roomieVerse -->
+				<div class="logo-item" title="roomieVerse">
+					<img src="/assets/logos/logo2.png" alt="roomieVerse Logo" class="real-logo logo-rv" />
+				</div>
+				
+				<!-- Separator -->
+				<div class="separator"></div>
+				
+				<!-- Logo 2: roomio -->
+				<div class="logo-item" title="roomio">
+					<img src="/assets/logos/roomio.png" alt="roomio Logo" class="real-logo logo-ro" />
+				</div>
+				
+				<!-- Separator -->
+				<div class="separator"></div>
+
+				<!-- Logo 3: roomiBase -->
+				<div class="logo-item" title="roomiBase">
+					<img src="/assets/logos/roomibase.png" alt="roomiBase Logo" class="real-logo logo-rb" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Project Details Section -->
+		<section class="projects-grid">
+			<!-- Card 1 -->
+			<div class="project-card glass-panel card-1">
+				<div class="card-header">
+					<img src="/assets/logos/logo2.png" alt="roomieVerse" class="card-logo-small logo-rv" />
+				</div>
+				<p>Your digital universe for co-living. Manage tasks, events, and communication seamlessly with your roommates.</p>
+				<a href="#" class="card-link">Explore &rarr;</a>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="project-card glass-panel card-2">
+				<div class="card-header">
+					<img src="/assets/logos/roomio.png" alt="roomio" class="card-logo-small logo-ro" />
+				</div>
+				<p>The smartest way to handle shared expenses and bills. No more awkward conversations about who owes what.</p>
+				<a href="#" class="card-link">Explore &rarr;</a>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="project-card glass-panel card-3">
+				<div class="card-header">
+					<img src="/assets/logos/roomibase.png" alt="roomiBase" class="card-logo-small logo-rb" />
+				</div>
+				<p>Find the perfect room or roommate. Advanced matchmaking based on lifestyle, habits, and preferences.</p>
+				<a href="#" class="card-link">Explore &rarr;</a>
+			</div>
+		</section>
+		
+		<footer>
+			<p>&copy; {new Date().getFullYear()} Roomie Ecosystem. Crafted with Astro.</p>
+		</footer>
+
+	</main>
 </Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* Hero Section */
+	.hero {
+		text-align: center;
+		margin-bottom: 4rem;
+		animation: fadeUp 0.8s ease-out forwards;
+	}
+
+	.title {
+		font-size: clamp(3rem, 6vw, 5rem);
+		font-weight: 800;
+		line-height: 1.1;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.text-gradient {
+		background: linear-gradient(135deg, var(--color-brand-1), var(--color-brand-2));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	/* Real Logo Row Section */
+	.logo-row-section {
+		width: 100%;
+		max-width: 1200px; /* Increased from 900px to give more room */
+		margin-bottom: 5rem;
+		animation: fadeUp 0.8s ease-out 0.2s forwards;
+		opacity: 0;
+	}
+
+	.logo-row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5rem; /* Reduced gap to save horizontal space */
+		flex-wrap: wrap;
+		padding: 2rem;
+	}
+
+	.logo-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s ease;
+	}
+
+	.logo-item:hover {
+		transform: scale(1.05);
+	}
+
+	.real-logo {
+		width: auto;
+		object-fit: contain;
+		filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+	}
+
+	/* Adjust sizes for visual balance */
+	.real-logo.logo-rv {
+		height: 108px; /* 1.5x height for roomieVerse */
+	}
+
+	.real-logo.logo-ro {
+		height: 57px; /* 1.5x height for roomio */
+	}
+
+	.real-logo.logo-rb {
+		height: 57px; /* 1.5x height for roomibase */
+	}
+
+	/* Thin light line separator */
+	.separator {
+		width: 1px;
+		height: 56px;
+		background-color: #e2e8f0;
+		border-radius: 2px;
+	}
+
+	/* Projects Grid Section */
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		width: 100%;
+		margin-bottom: 6rem;
+		animation: fadeUp 0.8s ease-out 0.4s forwards;
+		opacity: 0;
+	}
+
+	.project-card {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		background: #ffffff;
+	}
+
+	.project-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	}
+
+	.card-1:hover { border-color: rgba(99, 102, 241, 0.3); }
+	.card-2:hover { border-color: rgba(236, 72, 153, 0.3); }
+	.card-3:hover { border-color: rgba(16, 185, 129, 0.3); }
+
+	.card-header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.5rem;
+		height: 48px; /* Fixed height container for consistent card headers */
+	}
+
+	.card-logo-small {
+		width: auto;
+		object-fit: contain;
+	}
+
+	.card-logo-small.logo-rv {
+		height: 78px; /* 1.5x height */
+	}
+	
+	.card-logo-small.logo-ro {
+		height: 42px; /* 1.5x height */
+	}
+
+	.card-logo-small.logo-rb {
+		height: 42px; /* 1.5x height */
+	}
+
+	.project-card p {
+		color: var(--color-text-muted);
+		line-height: 1.6;
+		margin-bottom: 2rem;
+		flex-grow: 1;
+	}
+
+	.card-link {
+		color: var(--color-brand-1);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		display: inline-flex;
+		align-items: center;
+		transition: opacity 0.2s ease;
+	}
+
+	.card-link:hover {
+		opacity: 0.7;
+	}
+
+	footer {
+		text-align: center;
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+		margin-top: auto;
+		opacity: 0.6;
+	}
+
+	/* Animations */
+	@keyframes fadeUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.logo-row {
+			gap: 1.5rem;
+		}
+		.real-logo.logo-rv { height: 112px; }
+		.real-logo.logo-ro { height: 56px; }
+		.real-logo.logo-rb { height: 56px; }
+		.separator { height: 48px; }
+	}
+</style>
